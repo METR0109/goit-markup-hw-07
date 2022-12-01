@@ -350,7 +350,7 @@ ul {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  transition: fill 250ms var(--time-function),transform 250ms var(--time-function);
+  transition: fill 250ms var(--time-function), transform 250ms var(--time-function);
 }
 .modal-form-field:focus + .modal-form-icon {
   fill: var(--accent-color);
@@ -362,7 +362,7 @@ ul {
   padding: 14px 16px;
   line-height: calc(14 / 12);
   letter-spacing: 0.01em;
-  cursor: pointer; 
+  cursor: pointer;
   resize: none;
   outline: none;
   color: var(--primery-text-color);
@@ -507,20 +507,24 @@ ul {
   display: block;
 }
 /*-----SECTION WORK----- */
-.section-work {
+.work {
   padding-top: 0;
 }
-.work-list {
+.work__list {
   display: flex;
 }
-.work-item {
+.work__item {
   margin-right: 30px;
   position: relative;
 }
-.work-item:last-child {
+.work__item:last-child {
   margin-right: 0;
 }
-.work-card-text {
+
+.work__img {
+  display: block;
+}
+.work__text {
   position: absolute;
   bottom: 0;
   margin: 0;
@@ -545,9 +549,6 @@ ul {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-}
-.work-card {
-  display: block;
 }
 
 /*-----SECTION TEAM----- */
@@ -623,7 +624,7 @@ ul {
   background-color: var(--accent-color);
 }
 /*-----SECTION CLIENT----- */
-.client-title {
+.client-section__title {
   color: var(--secondary-text-color);
   margin-bottom: 50px;
 
@@ -633,15 +634,15 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.client-list {
+.client-section__list {
   display: flex;
   gap: 30px;
 }
-.client-item {
+.client-section__item {
   width: 170px;
   height: 92px;
 }
-.client-item-link {
+.client-section__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -656,30 +657,30 @@ ul {
   width: 106px;
   height: 60px;
 }
-.client-item-link:hover,
-.client-item-link:focus {
+.client-section__link:hover,
+.client-section__link:focus {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
 }
 
 /*------sechion-portfolio------*/
-.sechion-portfolio {
+.portfolio {
   border-color: var(--border-color-portfolio);
 }
 
 /*------- filter-list------ */
-.filter-list {
+.filter__list {
   margin-bottom: 50px;
   justify-content: center;
   display: flex;
 }
-.filter-item {
+.filter__item {
   margin-right: 8px;
 }
-.filter-item:last-child {
+.filter__item:last-child {
   margin-right: 0px;
 }
-.filter-btn {
+.filter__btn {
   display: inline-block;
   min-width: 73px;
   padding: 6px 22px;
@@ -694,49 +695,49 @@ ul {
   cursor: pointer;
   transition: background-color 250ms var(--time-function), color 250ms var(--time-function);
 }
-.filter-btn:hover,
-.filter-btn:focus,
-.filter-btn:active {
+.filter__btn:hover,
+.filter__btn:focus,
+.filter__btn:active {
   color: var(--white-text-bg);
   background-color: var(--accent-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.filter-btn.all {
+.filter__btn.all {
   padding-left: 25px;
   padding-right: 25px;
 }
 /*------- filter-list------ */
 
-.portfolio-card {
+.portfolio__img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-.flex-container {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.flex-element {
+.portfolio__item {
   flex-basis: calc((100% - 30px * 2) / 3);
 }
 
-.portfolio-element {
+.portfolio__box {
   padding: 20px 24px 19px;
   background: var(--white-text-bg);
   border: 1px solid var(--border-color-portfolio);
   border-top: none;
 }
-.portfolio-item:hover .overley {
+.portfolio__item:hover .portfolio__overley {
   transform: translateY(0);
 }
 
-.portfolio-tumb {
+.portfolio__tumb {
   position: relative;
   overflow: hidden;
 }
-.overley {
+.portfolio__overley {
   position: absolute;
   top: 0;
   left: 0;
@@ -759,7 +760,7 @@ ul {
   user-select: none;
   transition: transform 250ms var(--time-function);
 }
-.overlay-text {
+.portfolio__about {
 }
 .portfolio.title {
   margin-bottom: 4px;
@@ -775,14 +776,14 @@ ul {
   font-size: 16px;
   line-height: 1.9;
 }
-.portfolio-link {
+.portfolio__link {
   display: block;
   text-decoration: none;
   color: inherit;
   transition: box-shadow 250ms var(--time-function);
 }
-.portfolio-link:hover,
-.portfolio-link:focus {
+.portfolio__link:hover,
+.portfolio__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
